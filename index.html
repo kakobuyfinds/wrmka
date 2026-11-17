@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>CSSBuy spreadsheet | Product Finds, QC &amp; Shipping Guide</title>
+  <meta name="description" content="Browse HipobuyFind listings by category, compare CNY prices, and learn how to check seller links, warehouse QC photos and shipping costs before ordering with CSSBuy.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CSSBuy spreadsheet | Product Finds, QC &amp; Shipping Guide">
+  <meta property="og:description" content="Browse a filterable product shortlist and check sizing, seller links, warehouse photos and shipping costs.">
+  <meta name="theme-color" content="#102b24">
+  <!--
+    Search review: https://cssbuysspreadsheet.com/ and https://chinagrails.com/en/spreadsheet/agent/cssbuy cover category filters and QC. https://sopel.fit/cssbuy-spreadsheet emphasizes catalog breadth and direct agent links. https://cssbuyship.com/ and https://cssbuyluxe.com/ present category navigation and USD references.
+    This page adds a searchable shortlist with source listing IDs, a measurement-based QC checklist and a cost worksheet. Exact Google positions were not independently verified.
+    Catalog source: https://hipobuyfind.com/
+    Indexing submission pending. Deploy this file to its final public URL, add that URL as the self-referencing canonical, and request indexing in Google Search Console URL Inspection and Bing Webmaster Tools URL Submission for the verified property.
+    https://support.google.com/webmasters/answer/9012289
+    https://www.bing.com/webmasters/help/URL-Submission-62f2860b
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "CSSBuy spreadsheet",
+    "description": "An independent shopping guide with a selection of HipobuyFind listings and practical checks for sizing, warehouse photos and shipping costs.",
+    "inLanguage": "en"
+  }
+  </script>
+  <style>
+    :root{color-scheme:light;--ink:#102b24;--muted:#486057;--line:#d5e2db;--paper:#f5f8f4;--green:#175840;--lime:#d9f99d}
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    a{color:var(--green);text-underline-offset:.2em}
+    :focus-visible{outline:3px solid #9c4b14;outline-offset:4px}
+    .wrap{width:min(70rem,calc(100% - 2rem));margin-inline:auto}
+    .hero{background:radial-gradient(ellipse at top right,#286246,transparent 65%),#102b24;color:white;padding:clamp(3rem,8vw,6rem) 0;text-align:center}
+    .hero p{max-width:60ch;margin:1rem auto;color:#e2f2e8}
+    h1,h2,h3{line-height:1.2;text-wrap:balance}
+    h1{font-size:clamp(2.6rem,8vw,5.75rem);letter-spacing:-.065em;margin:0}
+    h2{font-size:clamp(1.65rem,4vw,2.6rem);letter-spacing:-.035em;margin-top:0}
+    h3{font-size:1.1rem;margin:.35rem 0}
+    .actions,.nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem 1.25rem}
+    .actions{margin-top:1.7rem}
+    .cta{display:inline-block;border:1px solid var(--lime);background:var(--lime);color:var(--ink);border-radius:.65rem;padding:.72rem 1.15rem;font-weight:750;text-decoration:none}
+    .cta.secondary{background:transparent;color:white}
+    .cta:hover{text-decoration:underline}
+    .nav{padding:1rem;border-bottom:1px solid var(--line);font-weight:650}
+    main{padding-block:2.5rem 3rem}
+    main>section{margin:0 0 3rem;scroll-margin-top:1rem}
+    .intro{max-width:72ch;margin-inline:auto;text-align:center}
+    .intro h2,.intro p{margin-bottom:.65rem}
+    .panel,.card,details{background:white;border:1px solid var(--line);border-radius:1rem}
+    .panel{padding:clamp(1rem,3vw,2rem)}
+    .tools{display:grid;grid-template-columns:2fr 1fr;gap:.75rem;margin:1rem 0}
+    label{display:block;font-weight:650}
+    input,select,button{font:inherit}
+    input,select{display:block;width:100%;min-width:0;padding:.6rem;border:1px solid #81978a;border-radius:.5rem;background:white;color:var(--ink)}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+    .card{overflow:hidden;min-width:0}
+    .card img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#ecf0ec}
+    .item{padding:1rem}
+    .meta{color:var(--muted);font-size:.9rem}
+    .item p{margin:.35rem 0}
+    .guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+    .guides ol,.guides ul{padding-inline-start:1.25rem}
+    .costs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+    output{font-weight:750;font-variant-numeric:tabular-nums}
+    details{padding:.85rem 1rem;margin-bottom:.6rem}
+    summary{cursor:pointer;font-weight:650}
+    details p{margin-bottom:.2rem}
+    footer{border-top:1px solid var(--line);padding:1.5rem 0;text-align:center;color:var(--muted)}
+    [hidden]{display:none!important}
+    @media(max-width:720px){.cards,.costs{grid-template-columns:repeat(2,minmax(0,1fr))}.guides{grid-template-columns:1fr}}
+    @media(max-width:450px){.cards,.tools{grid-template-columns:1fr}}
+  </style>
+<link rel="canonical" href="https://kakobuyfinds.github.io/wrmka/">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1>CSSBuy spreadsheet</h1>
+      <p>Find shoes, hoodies and everyday gear in the HipobuyFind catalog. Compare listed prices, then check the seller link, sizing and shipping costs before you order.</p>
+      <div class="actions">
+        <a class="cta" href="https://hipobuyfind.com">CSSBuy spreadsheet</a>
+        <a class="cta secondary" href="https://hipobuyfind.com">Buy it now</a>
+      </div>
+    </div>
+  </header>
+  <nav class="nav" aria-label="On this page">
+    <a href="#catalog">Product catalog</a>
+    <a href="#buying">Buying and QC</a>
+    <a href="#budget">Cost calculator</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <main class="wrap">
+    <section class="intro" aria-labelledby="overview">
+      <h2 id="overview">How does a CSSBuy spreadsheet work?</h2>
+      <p>A CSSBuy spreadsheet helps you shortlist products from Chinese marketplaces. If you want to order through CSSBuy, get the original seller URL from the product listing and check whether CSSBuy accepts it. This independent guide displays listings from HipobuyFind.</p>
+    </section>
+
+    <section id="catalog" aria-labelledby="catalog-title">
+      <h2 id="catalog-title">Product finds from HipobuyFind</h2>
+      <p class="meta">Catalog snapshot. Reference prices exclude delivery and agent charges. Open each listing for current prices, options and availability.</p>
+      <div class="tools" id="filters" hidden>
+        <label>Search by name or item ID
+          <input id="search" type="search" placeholder="e.g. fleece or 154917">
+        </label>
+        <label>Category
+          <select id="category">
+            <option value="">All categories</option>
+            <option value="shoes">Shoes</option>
+            <option value="hoodies">Hoodies and sweatshirts</option>
+            <option value="tees">T-shirts</option>
+            <option value="jackets">Jackets</option>
+            <option value="bags">Bags</option>
+          </select>
+        </label>
+      </div>
+      <p id="results" class="meta" role="status" hidden></p>
+      <div class="cards" id="products">
+        <article class="card" data-category="shoes">
+          <img src="https://si.geilicdn.com/open1700230128-1234478995-64a0000001987b40d1cb0a8115c2_1080_1440.jpg" alt="Cream chunky sneakers with wide laces" width="400" height="300" loading="lazy" decoding="async">
+          <div class="item">
+            <p class="meta">Shoes · Item 148191</p>
+            <h3><a href="https://hipobuyfind.com/goods-148191.html">Cream Chunky Sneakers with Wide Laces</a></h3>
+            <p>¥350.00 · ≈ US$48.61</p>
+          </div>
+        </article>
+        <article class="card" data-category="shoes">
+          <img src="https://si.geilicdn.com/open1700230128-1234478995-6d07000001987b436b390a22d249_800_800.jpg" alt="Black canvas low-top sneakers with gum soles" width="400" height="300" loading="lazy" decoding="async">
+          <div class="item">
+            <p class="meta">Shoes · Item 148188</p>
+            <h3><a href="https://hipobuyfind.com/goods-148188.html">Black Canvas Low-Top Sneakers with Gum Sole</a></h3>
+            <p>¥450.00 · ≈ US$62.50</p>
+          </div>
+        </article>
+        <article class="card" data-category="hoodies">
+          <img src="https://si.geilicdn.com/open1792148229-1234478995-76d100000196f413b04f0a8133b0_800_800.jpg" alt="Fleece-lined hoodie from the catalog" width="400" height="300" loading="lazy" decoding="async">
+          <div class="item">
+            <p class="meta">Hoodies · Item 154917</p>
+            <h3><a href="https://hipobuyfind.com/goods-154917.html">Fleece-Lined Hoodie</a></h3>
+            <p>¥170.00 · ≈ US$23.61</p>
+          </div>
+        </article>
+        <article class="card" data-category="tees">
+          <img src="https://si.geilicdn.com/open1792148229-1234478995-09a000000196efa4b3cc0aa0834c_800_800.jpg" alt="Short-sleeve T-shirt with a graphic print" width="400" height="300" loading="lazy" decoding="async">
+          <div class="item">
+            <p class="meta">T-shirts · Item 154920</p>
+            <h3><a href="https://hipobuyfind.com/goods-154920.html">Graphic Short-Sleeve T-Shirt</a></h3>
+            <p>¥105.00 · ≈ US$14.58</p>
+          </div>
+        </article>
+        <article class="card" data-category="jackets">
+          <img src="https://si.geilicdn.com/wdseller1489596767-2b4400000193c17bed690a210139_697_1024.jpg" alt="Hooded quick-dry jacket from the catalog" width="400" height="300" loading="lazy" decoding="async">
+          <div class="item">
+            <p class="meta">Jackets · Item 154851</p>
+            <h3><a href="https://hipobuyfind.com/goods-154851.html">Hooded Quick-Dry Jacket</a></h3>
+            <p>¥157.14 · ≈ US$21.83</p>
+          </div>
+        </article>
+        <article class="card" data-category="bags">
+          <img src="https://si.geilicdn.com/pcitem901921648802-198100000195895893e60a231316_939_939.jpg" alt="Multi-pocket backpack with a flap closure" width="400" height="300" loading="lazy" decoding="async">
+          <div class="item">
+            <p class="meta">Bags · Item 154846</p>
+            <h3><a href="https://hipobuyfind.com/goods-154846.html">Multi-Pocket Flap Backpack</a></h3>
+            <p>¥300.00 · ≈ US$41.67</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="buying" aria-labelledby="buying-title">
+      <h2 id="buying-title">Buying through CSSBuy and checking QC photos</h2>
+      <div class="guides">
+        <article class="panel">
+          <h3>From catalog entry to seller link</h3>
+          <ol>
+            <li>Open the catalog listing and look for the original seller URL, for example from Weidian, Taobao or 1688.</li>
+            <li>Paste the seller URL into CSSBuy. Confirm the listing loads and check the selected color, size, quantity and price.</li>
+            <li>Before paying, check domestic delivery, the agent's charges, and the conditions for requesting a return or exchange.</li>
+          </ol>
+        </article>
+        <article class="panel">
+          <h3>What to check at the warehouse</h3>
+          <ul>
+            <li><strong>Shoes:</strong> Check both size labels, sole condition and measured insole length if available.</li>
+            <li><strong>Clothing:</strong> Compare chest width, length and sleeve measurements with a similar garment you already own.</li>
+            <li><strong>Bags:</strong> Inspect the closures, seams and strap attachment points. Request a close-up if an important detail is missing.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="budget" aria-labelledby="budget-title">
+      <h2 id="budget-title">Estimate your total order cost</h2>
+      <p>Use one currency for every amount below. Get an international shipping quote for your destination using the packed weight and dimensions. Check whether the carrier uses actual or volumetric weight.</p>
+      <div class="costs" id="calculator" hidden>
+        <label>Items<input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+        <label>Domestic shipping<input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+        <label>Agent fees<input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+        <label>International shipping<input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+        <label>Estimated taxes and duties<input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+        <p>Estimated total<br><output id="total">0.00</output></p>
+      </div>
+      <noscript><p>Add the item prices, domestic shipping, agent fees, international shipping and estimated taxes and duties.</p></noscript>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">CSSBuy spreadsheet FAQ</h2>
+      <details>
+        <summary>Can I paste a HipobuyFind link into CSSBuy?</summary>
+        <p>Use the original seller URL from the catalog listing. Verify that CSSBuy can load it and that the item options match before placing an order.</p>
+      </details>
+      <details>
+        <summary>Why does checkout show a higher amount?</summary>
+        <p>The catalog shows reference item prices. Domestic postage, exchange rates, agent fees and international delivery can change the amount you pay. Your destination may also affect taxes and duties.</p>
+      </details>
+      <details>
+        <summary>How do I compare sizes from different sellers?</summary>
+        <p>Compare the measurements for the exact variant. Match garment measurements with garment measurements, or insole length with insole length, instead of relying on a size label alone.</p>
+      </details>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">Independent shopping guide · Catalog listings sourced from <a href="https://hipobuyfind.com">HipobuyFind</a></div>
+  </footer>
+  <script>
+    const filters = document.querySelector('#filters');
+    const search = document.querySelector('#search');
+    const category = document.querySelector('#category');
+    const results = document.querySelector('#results');
+    const cards = Array.from(document.querySelectorAll('#products article'), card => ({
+      card,
+      category: card.dataset.category,
+      text: card.querySelector('.item').textContent.toLowerCase()
+    }));
+
+    function renderCatalog() {
+      const words = search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      let shown = 0;
+      for (const entry of cards) {
+        const matches = (!category.value || category.value === entry.category) &&
+          words.every(word => entry.text.includes(word));
+        entry.card.hidden = !matches;
+        shown += Number(matches);
+      }
+      results.textContent = shown
+        ? `Showing ${shown} of ${cards.length} listings.`
+        : 'No matching listings. Try another category, name or item ID.';
+    }
+
+    filters.hidden = false;
+    results.hidden = false;
+    search.addEventListener('input', renderCatalog);
+    category.addEventListener('change', renderCatalog);
+    renderCatalog();
+
+    const calculator = document.querySelector('#calculator');
+    const amounts = Array.from(calculator.querySelectorAll('input'));
+    const total = document.querySelector('#total');
+    const formatAmount = new Intl.NumberFormat('en', {
+      minimumFractionDigits: 2, maximumFractionDigits: 2
+    });
+
+    function renderTotal() {
+      if (amounts.some(input => !input.validity.valid)) {
+        total.textContent = 'Enter positive amounts or zero, with up to two decimal places.';
+        return;
+      }
+      const cents = amounts.reduce((sum, input) => (
+        sum + Math.round((input.valueAsNumber || 0) * 100)
+      ), 0);
+      total.textContent = Number.isSafeInteger(cents)
+        ? formatAmount.format(cents / 100)
+        : 'Enter smaller amounts.';
+    }
+
+    calculator.hidden = false;
+    calculator.addEventListener('input', renderTotal);
+    renderTotal();
+  </script>
+</body>
+</html>
